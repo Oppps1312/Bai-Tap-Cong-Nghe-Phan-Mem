@@ -32,14 +32,14 @@ class ClockLabel extends JLabel implements ActionListener{
         
         switch (type) {
                             // set text for day, date, month, year
-            case "date" :   sdf = new SimpleDateFormat("EEE, MMM d, YYYY");
+            case "date" :   sdf = new SimpleDateFormat("EEE, dd-M-yyyy");
                             setForeground(Color.black);
                             setFont(new Font("sans-serif", Font.PLAIN,30));
                             setHorizontalAlignment(SwingConstants.CENTER);
                             setVerticalAlignment(SwingConstants.TOP);
                             break;
                             // set text for hour, minute, second
-            case "time" :   sdf = new SimpleDateFormat("hh:mm a");
+            case "time" :   sdf = new SimpleDateFormat("hh:mm");
                             setForeground(Color.blue);
                             setFont(new Font("sans-serif", Font.PLAIN, 60));
                             setHorizontalAlignment(SwingConstants.CENTER);
