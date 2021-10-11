@@ -24,7 +24,6 @@ import javax.swing.Timer;
  */
 public class DeskTopWatch extends javax.swing.JFrame {
     int hour, minute, second;
-    static int milisecond1 = 0;
     static int second1 = 0;
     static int minute1 = 0;
     static int hour1 = 0;
@@ -32,6 +31,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
     static int hourTimer;
     static int minuteTimer;
     static int secondTimer;
+    static boolean stateTimer = true;
     Timer timer;
     
  
@@ -65,9 +65,15 @@ public class DeskTopWatch extends javax.swing.JFrame {
         };
         thread.start();
         this.gioQuocte();
+
         
         
         
+    }
+    public void getValueTimer(){
+        hourTimer = (int) hourSpinner.getValue();
+        minuteTimer = (int) minuteSpinner.getValue();
+        secondTimer = (int) secondSpinner.getValue();
     }
     public void gioQuocte(){
         Thread thread = new Thread(){
@@ -153,11 +159,12 @@ public class DeskTopWatch extends javax.swing.JFrame {
         bamGioPanel = new javax.swing.JPanel();
         hourOfStop = new javax.swing.JLabel();
         secondOfStop = new javax.swing.JLabel();
-        milisecondStop = new javax.swing.JLabel();
         minuteOfStop = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         HenGioPanel = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         hourSpinner = new javax.swing.JSpinner();
@@ -367,7 +374,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                     .addComponent(newyorkTime, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("", gioQuocTePanel);
@@ -468,7 +475,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addGroup(baoThucPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("", baoThucPanel);
@@ -478,22 +485,17 @@ public class DeskTopWatch extends javax.swing.JFrame {
         hourOfStop.setBackground(new java.awt.Color(204, 204, 204));
         hourOfStop.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         hourOfStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hourOfStop.setText("00 :");
+        hourOfStop.setText("00 ");
         hourOfStop.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         secondOfStop.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         secondOfStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        secondOfStop.setText("00 :");
+        secondOfStop.setText("00 ");
         secondOfStop.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
-        milisecondStop.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        milisecondStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        milisecondStop.setText("00 ");
-        milisecondStop.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         minuteOfStop.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         minuteOfStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        minuteOfStop.setText("00 :");
+        minuteOfStop.setText("00 ");
         minuteOfStop.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -521,38 +523,53 @@ public class DeskTopWatch extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText(":");
+
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText(":");
+
         javax.swing.GroupLayout bamGioPanelLayout = new javax.swing.GroupLayout(bamGioPanel);
         bamGioPanel.setLayout(bamGioPanelLayout);
         bamGioPanelLayout.setHorizontalGroup(
             bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bamGioPanelLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(hourOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(minuteOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(secondOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addComponent(milisecondStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-            .addGroup(bamGioPanelLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
+                .addGroup(bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(bamGioPanelLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))
+                    .addGroup(bamGioPanelLayout.createSequentialGroup()
+                        .addComponent(hourOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bamGioPanelLayout.createSequentialGroup()
+                        .addComponent(minuteOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(secondOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(bamGioPanelLayout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52))))
         );
         bamGioPanelLayout.setVerticalGroup(
             bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bamGioPanelLayout.createSequentialGroup()
                 .addGap(119, 119, 119)
                 .addGroup(bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(secondOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(minuteOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hourOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(milisecondStop, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(secondOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(minuteOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hourOfStop, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bamGioPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -562,7 +579,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                         .addGroup(bamGioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("", bamGioPanel);
@@ -753,7 +770,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addGap(115, 115, 115)
                 .addComponent(hourDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dayDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addComponent(dayDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -842,27 +859,24 @@ public class DeskTopWatch extends javax.swing.JFrame {
                
                    if(stateCountDown == true){
                        try {
-                           sleep(1);
-                           if(milisecond1 > 1000){
-                               milisecond1 = 0;
-                               second1++;
-                           }
+                           sleep(1000);
+                           
                            if(second1 > 60){
-                               milisecond1 = 0;
+                              
                                second1 = 0;
                                minute1++;
                            }
                            if(minute1 > 60){
-                               milisecond1 = 0;
+                               
                                second1 = 0;
                                minute1 = 0;
                                hour1++;
                            }
-                           milisecondStop.setText(milisecond1 + "");
-                           secondOfStop.setText(second1 + " : ");
-                           minuteOfStop.setText(minute1 + " : ");
-                           hourOfStop.setText(hour1 + " : ");
-                           milisecond1++;
+                          
+                           secondOfStop.setText(second1 + "");
+                           minuteOfStop.setText(minute1 + "");
+                           hourOfStop.setText(hour1 + "");
+                           second1++;
                        } catch (Exception e) {
                        }
                    }
@@ -888,18 +902,18 @@ public class DeskTopWatch extends javax.swing.JFrame {
         hour1 = 0;
         minute1 = 0;
         second1 = 0;
-        milisecond1 = 0;
-        hourOfStop.setText("00 : ");
-        minuteOfStop.setText("00 : ");
-        secondOfStop.setText("00  : ");
-        milisecondStop.setText("00");
+        
+        hourOfStop.setText("00");
+        minuteOfStop.setText("00");
+        secondOfStop.setText("00");
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void StartButtonTimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonTimerActionPerformed
         // TODO add your handling code here:
-        hourTimer = (int) hourSpinner.getValue();
-        minuteTimer = (int) minuteSpinner.getValue();
-        secondTimer = (int) secondSpinner.getValue();
+       if(stateTimer){
+           getValueTimer();
+       }
         timer = new Timer(1000, new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -947,6 +961,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
 
     private void ResetButtonTimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetButtonTimerActionPerformed
         // TODO add your handling code here:
+       stateTimer = true;
        timer.stop();
        hourTimer = 0;
        minuteTimer = 0;
@@ -958,6 +973,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
 
     private void StopButtonTimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopButtonTimerActionPerformed
         // TODO add your handling code here:
+        stateTimer = false;
         timer.stop();
         
     }//GEN-LAST:event_StopButtonTimerActionPerformed
@@ -1032,6 +1048,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -1042,6 +1059,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
@@ -1059,7 +1077,6 @@ public class DeskTopWatch extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel menuBar;
-    private javax.swing.JLabel milisecondStop;
     private javax.swing.JLabel milisecondTimer;
     private javax.swing.JLabel minuteLabelTimer;
     private javax.swing.JLabel minuteOfStop;
