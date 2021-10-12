@@ -140,7 +140,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="GioQuocTeButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Gi&#x1edd; Qu&#x1ed1;c T&#x1ebf;"/>
+                <Property name="text" type="java.lang.String" value="WORLD TIME"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GioQuocTeButtonActionPerformed"/>
@@ -148,7 +148,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="BamGioButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="B&#x1ea5;m Gi&#x1edd;"/>
+                <Property name="text" type="java.lang.String" value="STOPWATCH"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BamGioButtonActionPerformed"/>
@@ -156,7 +156,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="HenGioButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="H&#x1eb9;n Gi&#x1edd;"/>
+                <Property name="text" type="java.lang.String" value="TIMER"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HenGioButtonActionPerformed"/>
@@ -164,7 +164,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="BaoThucButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="B&#xe1;o Th&#x1ee9;c"/>
+                <Property name="text" type="java.lang.String" value="ALARM"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BaoThucButtonActionPerformed"/>
@@ -172,7 +172,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="XemGioButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Xem Ng&#xe0;y Gi&#x1edd;"/>
+                <Property name="text" type="java.lang.String" value="CLOCK"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="XemGioButtonActionPerformed"/>
