@@ -220,9 +220,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 // set position of central point alway in center of screen
                 g2d.translate(getWidth()/2, getHeight()/2);
 
-                // Resize clock face when resize screen
-                int side = getWidth() > getHeight() ? getHeight() : getWidth();
-                g2d.scale(side/250, side/250);
+                
 
                 // repaint process
                 setAllRenderingHints(g2d);
