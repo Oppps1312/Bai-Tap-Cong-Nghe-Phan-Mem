@@ -220,7 +220,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 // set position of central point alway in center of screen
                 g2d.translate(getWidth()/2, getHeight()/2);
 
-                
+           
 
                 // repaint process
                 setAllRenderingHints(g2d);
@@ -535,15 +535,12 @@ public class DeskTopWatch extends javax.swing.JFrame {
                         .addGroup(baoThucPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(baoThucPanelLayout.createSequentialGroup()
                                 .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(54, 54, 54)
                                 .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(baoThucPanelLayout.createSequentialGroup()
                                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(85, 85, 85)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(baoThucPanelLayout.createSequentialGroup()
-                .addGroup(baoThucPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(baoThucPanelLayout.createSequentialGroup()
                         .addGap(122, 122, 122)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -566,10 +563,12 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addGroup(baoThucPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(baoThucPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSpinner5, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                    .addComponent(jSpinner4))
+                    .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(baoThucPanelLayout.createSequentialGroup()
+                        .addComponent(jSpinner5, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                        .addGap(8, 8, 8)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -580,7 +579,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addGroup(baoThucPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("", baoThucPanel);
@@ -1062,28 +1061,17 @@ public class DeskTopWatch extends javax.swing.JFrame {
                         hourTimer--;
                         minuteTimer = 60;
                     }
-                     if(secondTimer == 0){
-                        secondTimer = 60;
-                        minuteTimer--;
-                    }
-                    if(minuteTimer < 0){
-                        JOptionPane.showMessageDialog(rootPane, "Times up", "Stopped", 0);
-                        timer.stop();
-                        minuteTimer = 0;
-                        secondTimer = 0;
-                    }else{
+                    else{
                         secondTimer--;
                         hourLabelTimer.setText(""+hourTimer);
                         minuteLabelTimer.setText(""+minuteTimer);
                         secondLabelTimer.setText(""+secondTimer);
-                    
-                }
+                    }
                 }
                 
                 
             }
         });
-        
         timer.start();
         
         
