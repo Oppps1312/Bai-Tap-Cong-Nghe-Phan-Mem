@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.mavenproject1;
+package desktopwatchversion2;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -18,22 +18,15 @@ public class Normal_Alarm_Frame extends javax.swing.JFrame {
      */
     Clip clip;
     public Normal_Alarm_Frame() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("D:\\Source code\\Java\\Main\\audio.wav");
+        File file = new File("audio.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         clip = AudioSystem.getClip();
         clip.open(audioStream);
         clip.start();
+//        noteLabel.setText(text);
         initComponents();
 //        playSound();
     }
-    // play sound
-//    public void playSound() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
-//        File file = new File("audio.wav");
-//        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
-//        clip = AudioSystem.getClip();
-//        clip.open(audioStream);
-//        clip.start();
-//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,7 +37,7 @@ public class Normal_Alarm_Frame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        noteLabel = new javax.swing.JLabel();
         stopButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -52,8 +45,8 @@ public class Normal_Alarm_Frame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 255));
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
-        jLabel1.setText("Dậy dậy đê cho t, dậy ngayyyyy!!!!");
+        noteLabel.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        noteLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         stopButton.setBackground(new java.awt.Color(0, 102, 255));
         stopButton.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
@@ -69,21 +62,17 @@ public class Normal_Alarm_Frame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(70, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(174, 174, 174)
                 .addComponent(stopButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
+            .addComponent(noteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117)
+                .addComponent(noteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(stopButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
         );
@@ -101,7 +90,10 @@ public class Normal_Alarm_Frame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void set_note_text(String text){
+        noteLabel.setText(text); 
+            
+    }
     private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopButtonActionPerformed
         // TODO add your handling code here:
         this.dispose();
@@ -154,8 +146,8 @@ public class Normal_Alarm_Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel noteLabel;
     private javax.swing.JButton stopButton;
     // End of variables declaration//GEN-END:variables
 }

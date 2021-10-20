@@ -110,8 +110,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="GioQuocTeButton" max="32767" attributes="0"/>
                           <Component id="BamGioButton" alignment="0" pref="115" max="32767" attributes="0"/>
-                          <Component id="HenGioButton" alignment="1" pref="115" max="32767" attributes="0"/>
-                          <Component id="XemGioButton" alignment="0" pref="115" max="32767" attributes="0"/>
+                          <Component id="XemGioButton" alignment="1" pref="115" max="32767" attributes="0"/>
+                          <Component id="HenGioButton" alignment="0" pref="115" max="32767" attributes="0"/>
                           <Component id="BaoThucButton" alignment="0" pref="115" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -127,11 +127,11 @@
                       <Component id="BaoThucButton" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="BamGioButton" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="HenGioButton" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="XemGioButton" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="HenGioButton" min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace pref="570" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -153,12 +153,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BamGioButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="HenGioButton">
+            <Component class="javax.swing.JButton" name="XemGioButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Hen Gio"/>
+                <Property name="text" type="java.lang.String" value="Xem Ngay Gio"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HenGioButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="XemGioButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BaoThucButton">
@@ -169,12 +169,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BaoThucButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="XemGioButton">
+            <Component class="javax.swing.JButton" name="HenGioButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Xem Ngay Gio"/>
+                <Property name="text" type="java.lang.String" value="Hen Gio"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="XemGioButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HenGioButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

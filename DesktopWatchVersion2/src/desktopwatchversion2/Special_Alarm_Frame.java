@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.mavenproject1;
+package desktopwatchversion2;
 
 import java.io.File;
 import java.io.IOException;
@@ -66,7 +66,7 @@ public class Special_Alarm_Frame extends javax.swing.JFrame {
     
     Clip clip;
     public Special_Alarm_Frame() throws UnsupportedAudioFileException, LineUnavailableException, LineUnavailableException, IOException {
-        File file = new File("audio.wav");
+        File file = new File("D:\\Source code\\Java\\Main\\audio.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         clip = AudioSystem.getClip();
         clip.open(audioStream);
@@ -101,6 +101,7 @@ public class Special_Alarm_Frame extends javax.swing.JFrame {
         sample_Text.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         sample_Text.setText(random_sample_Text);
         sample_Text.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sample_Text.setEnabled(false);
 
         submit_Button.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         submit_Button.setText("SUBMIT");
@@ -171,7 +172,7 @@ public class Special_Alarm_Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         String User_Write = user_Text.getText();
         if (User_Write.equals(random_sample_Text)){
-            this.setVisible(false);
+            this.dispose();
             clip.stop();
         }
     }//GEN-LAST:event_submit_ButtonActionPerformed

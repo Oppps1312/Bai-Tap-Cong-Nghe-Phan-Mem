@@ -103,6 +103,7 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
           </Properties>
           <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="sample_Text.setEnabled(false);"/>
             <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sample_Text.setEditable(false);"/>
           </AuxValues>
         </Component>

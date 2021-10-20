@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavenproject1;
+package desktopwatchversion2;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -77,6 +77,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                             try {
                                 Normal_Alarm_Frame normal_alarm = new Normal_Alarm_Frame();
                                 normal_alarm.setVisible(true);
+                                normal_alarm.set_note_text(alarmTextField.getText());
                             } catch (IOException ex) {
                                 Logger.getLogger(DeskTopWatch.class.getName()).log(Level.SEVERE, null, ex);
                             } catch (UnsupportedAudioFileException ex) {
@@ -186,9 +187,9 @@ public class DeskTopWatch extends javax.swing.JFrame {
         menuBar = new javax.swing.JPanel();
         GioQuocTeButton = new javax.swing.JButton();
         BamGioButton = new javax.swing.JButton();
-        HenGioButton = new javax.swing.JButton();
-        BaoThucButton = new javax.swing.JButton();
         XemGioButton = new javax.swing.JButton();
+        BaoThucButton = new javax.swing.JButton();
+        HenGioButton = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         gioQuocTePanel = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
@@ -348,10 +349,10 @@ public class DeskTopWatch extends javax.swing.JFrame {
             }
         });
 
-        HenGioButton.setText("Hen Gio");
-        HenGioButton.addActionListener(new java.awt.event.ActionListener() {
+        XemGioButton.setText("Xem Ngay Gio");
+        XemGioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HenGioButtonActionPerformed(evt);
+                XemGioButtonActionPerformed(evt);
             }
         });
 
@@ -362,10 +363,10 @@ public class DeskTopWatch extends javax.swing.JFrame {
             }
         });
 
-        XemGioButton.setText("Xem Ngay Gio");
-        XemGioButton.addActionListener(new java.awt.event.ActionListener() {
+        HenGioButton.setText("Hen Gio");
+        HenGioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                XemGioButtonActionPerformed(evt);
+                HenGioButtonActionPerformed(evt);
             }
         });
 
@@ -378,8 +379,8 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GioQuocTeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BamGioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(HenGioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(XemGioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                    .addComponent(XemGioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                    .addComponent(HenGioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                     .addComponent(BaoThucButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -392,11 +393,11 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addComponent(BaoThucButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(BamGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(HenGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(38, 38, 38)
                 .addComponent(XemGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(HenGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(570, Short.MAX_VALUE))
         );
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -1023,10 +1024,10 @@ public class DeskTopWatch extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void XemGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XemGioButtonActionPerformed
+    private void HenGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HenGioButtonActionPerformed
         // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(4);
-    }//GEN-LAST:event_XemGioButtonActionPerformed
+    }//GEN-LAST:event_HenGioButtonActionPerformed
 
     private void GioQuocTeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GioQuocTeButtonActionPerformed
         // TODO add your handling code here:
@@ -1043,10 +1044,10 @@ public class DeskTopWatch extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(2);
     }//GEN-LAST:event_BamGioButtonActionPerformed
 
-    private void HenGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HenGioButtonActionPerformed
+    private void XemGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XemGioButtonActionPerformed
         // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(3);
-    }//GEN-LAST:event_HenGioButtonActionPerformed
+    }//GEN-LAST:event_XemGioButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -1198,6 +1199,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
         min_alr = (int)minute_Spinner_Alarm.getValue();
         flag = 1;
         setButton.setEnabled(false);
+        alarmTextField.setEditable(false);
         if (SpecialRadioButton.isSelected()) {
             NormalRadioButton.setEnabled(false);
             flag = 1;
@@ -1217,6 +1219,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
         setButton.setEnabled(true);
         SpecialRadioButton.setEnabled(true);
         NormalRadioButton.setEnabled(true);
+        alarmTextField.setEditable(true);
         hourSpinnerAlarm.setValue(0);
         minute_Spinner_Alarm.setValue(0);
     }//GEN-LAST:event_cancleButtonActionPerformed
