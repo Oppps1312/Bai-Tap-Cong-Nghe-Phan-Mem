@@ -1062,17 +1062,28 @@ public class DeskTopWatch extends javax.swing.JFrame {
                         hourTimer--;
                         minuteTimer = 60;
                     }
-                    else{
+                     if(secondTimer == 0){
+                        secondTimer = 60;
+                        minuteTimer--;
+                    }
+                    if(minuteTimer < 0){
+                        JOptionPane.showMessageDialog(rootPane, "Times up", "Stopped", 0);
+                        timer.stop();
+                        minuteTimer = 0;
+                        secondTimer = 0;
+                    }else{
                         secondTimer--;
                         hourLabelTimer.setText(""+hourTimer);
                         minuteLabelTimer.setText(""+minuteTimer);
                         secondLabelTimer.setText(""+secondTimer);
-                    }
+                    
+                }
                 }
                 
                 
             }
         });
+        
         timer.start();
         
         
