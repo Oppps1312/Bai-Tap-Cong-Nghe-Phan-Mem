@@ -209,32 +209,6 @@ public class DeskTopWatch extends javax.swing.JFrame {
         barcelonaTime = new javax.swing.JLabel();
         parisTime = new javax.swing.JLabel();
         newyorkTime = new javax.swing.JLabel();
-        bamGioPanel = new javax.swing.JPanel();
-        hourOfStop = new javax.swing.JLabel();
-        secondOfStop = new javax.swing.JLabel();
-        minuteOfStop = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        HenGioPanel = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        hourSpinner = new javax.swing.JSpinner();
-        minuteSpinner = new javax.swing.JSpinner();
-        secondSpinner = new javax.swing.JSpinner();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        StartButtonTimer = new javax.swing.JButton();
-        StopButtonTimer = new javax.swing.JButton();
-        ResetButtonTimer = new javax.swing.JButton();
-        milisecondTimer = new javax.swing.JLabel();
-        hourLabelTimer = new javax.swing.JLabel();
-        minuteLabelTimer = new javax.swing.JLabel();
-        secondLabelTimer = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         AnalogPanel = new javax.swing.JPanel(){
@@ -312,6 +286,32 @@ public class DeskTopWatch extends javax.swing.JFrame {
         };
         hourDisplay = new javax.swing.JLabel();
         dayDisplay = new javax.swing.JLabel();
+        bamGioPanel = new javax.swing.JPanel();
+        hourOfStop = new javax.swing.JLabel();
+        secondOfStop = new javax.swing.JLabel();
+        minuteOfStop = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        HenGioPanel = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        hourSpinner = new javax.swing.JSpinner();
+        minuteSpinner = new javax.swing.JSpinner();
+        secondSpinner = new javax.swing.JSpinner();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        StartButtonTimer = new javax.swing.JButton();
+        StopButtonTimer = new javax.swing.JButton();
+        ResetButtonTimer = new javax.swing.JButton();
+        milisecondTimer = new javax.swing.JLabel();
+        hourLabelTimer = new javax.swing.JLabel();
+        minuteLabelTimer = new javax.swing.JLabel();
+        secondLabelTimer = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         baoThucPanel = new javax.swing.JPanel();
         NormalRadioButton = new javax.swing.JRadioButton();
         SpecialRadioButton = new javax.swing.JRadioButton();
@@ -379,9 +379,11 @@ public class DeskTopWatch extends javax.swing.JFrame {
                 .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GioQuocTeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BamGioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(XemGioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                     .addComponent(HenGioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(BaoThucButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
+                    .addComponent(BaoThucButton, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(XemGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         menuBarLayout.setVerticalGroup(
@@ -389,15 +391,15 @@ public class DeskTopWatch extends javax.swing.JFrame {
             .addGroup(menuBarLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(GioQuocTeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(BaoThucButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(BamGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(33, 33, 33)
                 .addComponent(XemGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(33, 33, 33)
+                .addComponent(BamGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
                 .addComponent(HenGioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(570, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(BaoThucButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -475,7 +477,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                     .addGroup(gioQuocTePanelLayout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         gioQuocTePanelLayout.setVerticalGroup(
             gioQuocTePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -518,6 +520,58 @@ public class DeskTopWatch extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("", gioQuocTePanel);
+
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout AnalogPanelLayout = new javax.swing.GroupLayout(AnalogPanel);
+        AnalogPanel.setLayout(AnalogPanelLayout);
+        AnalogPanelLayout.setHorizontalGroup(
+            AnalogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 599, Short.MAX_VALUE)
+        );
+        AnalogPanelLayout.setVerticalGroup(
+            AnalogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 344, Short.MAX_VALUE)
+        );
+
+        hourDisplay.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        hourDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hourDisplay.setText("Hour");
+
+        dayDisplay.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        dayDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dayDisplay.setText("Ngay va gio");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AnalogPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(dayDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(hourDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 67, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(AnalogPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(hourDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dayDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(jPanel3, java.awt.BorderLayout.PAGE_START);
+
+        jTabbedPane1.addTab("", jPanel2);
 
         bamGioPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -595,7 +649,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(bamGioPanelLayout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52))))
         );
@@ -790,58 +844,6 @@ public class DeskTopWatch extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("", HenGioPanel);
 
-        jPanel2.setLayout(new java.awt.BorderLayout());
-
-        javax.swing.GroupLayout AnalogPanelLayout = new javax.swing.GroupLayout(AnalogPanel);
-        AnalogPanel.setLayout(AnalogPanelLayout);
-        AnalogPanelLayout.setHorizontalGroup(
-            AnalogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
-        );
-        AnalogPanelLayout.setVerticalGroup(
-            AnalogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 344, Short.MAX_VALUE)
-        );
-
-        hourDisplay.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
-        hourDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hourDisplay.setText("Hour");
-
-        dayDisplay.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        dayDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dayDisplay.setText("Ngay va gio");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AnalogPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(dayDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(hourDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 67, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(AnalogPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hourDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dayDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 80, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel3, java.awt.BorderLayout.CENTER);
-
-        jTabbedPane1.addTab("", jPanel2);
-
         baoThucPanel.setBackground(new java.awt.Color(51, 204, 255));
 
         buttonGroup1.add(NormalRadioButton);
@@ -1026,7 +1028,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
 
     private void HenGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HenGioButtonActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(4);
+        jTabbedPane1.setSelectedIndex(3);
     }//GEN-LAST:event_HenGioButtonActionPerformed
 
     private void GioQuocTeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GioQuocTeButtonActionPerformed
@@ -1036,7 +1038,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
 
     private void BaoThucButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaoThucButtonActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(1);
+        jTabbedPane1.setSelectedIndex(4);
     }//GEN-LAST:event_BaoThucButtonActionPerformed
 
     private void BamGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BamGioButtonActionPerformed
@@ -1046,7 +1048,7 @@ public class DeskTopWatch extends javax.swing.JFrame {
 
     private void XemGioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XemGioButtonActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(3);
+        jTabbedPane1.setSelectedIndex(1);
     }//GEN-LAST:event_XemGioButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
