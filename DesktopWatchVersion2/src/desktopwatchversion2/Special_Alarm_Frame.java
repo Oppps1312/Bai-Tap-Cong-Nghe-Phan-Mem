@@ -66,7 +66,7 @@ public class Special_Alarm_Frame extends javax.swing.JFrame {
     
     Clip clip;
     public Special_Alarm_Frame() throws UnsupportedAudioFileException, LineUnavailableException, LineUnavailableException, IOException {
-        File file = new File("D:\\Source code\\Java\\Main\\audio.wav");
+        File file = new File("audio.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         clip = AudioSystem.getClip();
         clip.open(audioStream);
