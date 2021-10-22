@@ -1207,14 +1207,20 @@ public class DeskTopWatch extends javax.swing.JFrame {
         String text = "Alarm " + String.format("%02d", hour) + ":" + String.format("%02d", minute) + " to " + String.format("%02d", hour_alr) + ":" + String.format("%02d", min_alr) + " is on";
         notiLabel.setText(text);
         if (SpecialRadioButton.isSelected()) {
+            SpecialRadioButton.setEnabled(false);
             NormalRadioButton.setEnabled(false);
             flag = 1;
         }
         else if (NormalRadioButton.isSelected()){
             SpecialRadioButton.setEnabled(false);
+            NormalRadioButton.setEnabled(false);
             flag = 2;
         }
-
+        else{
+            SpecialRadioButton.setEnabled(false);
+            NormalRadioButton.setEnabled(false);
+            flag = 2;
+        }
                             
                                  
     }//GEN-LAST:event_setButtonActionPerformed
